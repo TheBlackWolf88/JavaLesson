@@ -437,4 +437,14 @@ class Main {
 }
 ```
 
+#### Enumok
+Vannak enumok, így vannak:
+```java
+enum Size {
+    S,
+    M,
+    L
+}
+```
+
 # Vége
