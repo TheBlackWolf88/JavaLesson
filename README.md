@@ -40,7 +40,6 @@ A Javában 4 féle láthatóság van:
   + a tagot csak a leszármazott osztályok láthatják
 
 ### Típusok
-
 + Primitívek (mindig másolódnak):
   + szám típusok (byte, int, float, double, long)
   + char
@@ -66,9 +65,36 @@ Kulcsszavak, amelyek egy tagra hatnak.
   + metódus esetén egy felülírandó metódust hozunk létre, törzs nélkül
   + osztály esetén egy olyan osztályt amit nem lehet példányosítani
 
-### Osztályok
+### Osztályok, objektumok
++ Az osztályok az objektumok sablonjai
++ Ha megkonstruálunk egy osztályt, azzal létrehozunk egy objektumot.
++ [Így](https://imgur.com/a/1cADykT) néz ki a memóriában
+```java
+//ez egy osztály
+class Dog() {
+  private double height;
+  //ez a konstruktor
+  public Dog(double height) {
+      //a this kulcsszóval  a jelenlegi OBJEKTUMra tudunk referálni (amit létrehozott az osztályunk)
+      this.height = height;
+  }
+}
 
-### Leszármazás
+class Main{
+  public static void main(String[] args) {
+    //ez egy objektumreferencia változó 
+    Dog gugya = new Dog(6.2);
+    //ez meg egy primitív
+    int a = 0;
+    
+  }
+}
+```
+
+### Leszármazás, interfacek
 
 + Minden osztály amit létrehozunk legalább egy szülővel rendelkezik (java.Object)
-+ 
++ Vannak interfacek, amelyeknek nincs adattagjuk csak metódusaik
++ Egy osztály csak egy szülővel rendelkezhet, de több interfacet is implementálhat
+```java
+```
