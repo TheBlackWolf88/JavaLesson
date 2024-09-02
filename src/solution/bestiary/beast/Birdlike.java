@@ -1,11 +1,9 @@
 package solution.bestiary.beast;
 
+import solution.bestiary.utils.Size;
+
 public final class Birdlike extends Beast{
 
-    @Override
-    public void speak() {
-        System.out.println("Csiip");
-    }
 
     @Override
     public String type() {
@@ -17,9 +15,7 @@ public final class Birdlike extends Beast{
         return 4;
     }
 
-
-
-    public Birdlike(String name, String color, double powerLevel) {
-        super(name, color, powerLevel);
+    public Birdlike(String name, String color, double powerLevel, Size size, String cry) {
+        super(name, color, powerLevel, size, cry);
     }
 }

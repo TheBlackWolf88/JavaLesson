@@ -5,5 +5,7 @@ public enum Size {
     SMALL,
     MEDIUM,
     LARGE,
-    GIGANTIC
+    GIGANTIC;
+
+    public static final Size[] sizes = Size.values();
 }

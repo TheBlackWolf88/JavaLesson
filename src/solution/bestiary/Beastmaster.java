@@ -1,7 +1,8 @@
 package solution.bestiary;
 
-import solution.bestiary.beast.*;
-import solution.bestiary.utils.BeastType;
+import solution.bestiary.utils.NoBookException;
+
+import java.util.Objects;
 
 public final class Beastmaster {
     private Bestiary myBook;
@@ -11,22 +12,19 @@ public final class Beastmaster {
         this.name = name;
     }
 
-    public void pledgeBook(BeastType bt) {
-        switch (bt) {
-            case Oxlike -> myBook = new Bestiary<Oxlike>();
-            case Birdlike -> myBook = new Bestiary<Birdlike>();
-            case Wolflike -> myBook = new Bestiary<Wolflike>();
-            case Fishlike -> myBook = new Bestiary<Fishlike>();
-            case Antlike -> myBook = new Bestiary<Antlike>();
-        }
+    public void newBook() {
+        this.myBook = new Bestiary();
     }
 
     public double getPower() {
         return myBook.calcPower();
     }
 
-    public Bestiary getMyBook() {
-        return myBook;
+    public Bestiary getMyBook() throws NoBookException {
+        if (myBook != null) {
+            return myBook;
+        }
+        throw new NoBookException();
     }
 
     //returns the winner
@@ -37,5 +35,19 @@ public final class Beastmaster {
 
     public String getName() {
         return name;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if(obj instanceof Beastmaster that) {
+            return Objects.equals(this.name, that.getName());
+        }
+        return false;
+    }
+
+    @Override
+    public String toString() {
+        return "Beastmaster " + name;
     }
 }

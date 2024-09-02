@@ -7,8 +7,11 @@ public abstract class Beast implements Comparable<Beast> {
     private final String color;
     private final double  powerLevel;
     private final Size size;
+    private final String cry;
 
-    public abstract void speak();
+    public void speak() {
+        System.out.println(cry);
+    }
 
     public abstract String type();
 
@@ -18,11 +21,12 @@ public abstract class Beast implements Comparable<Beast> {
 
     public abstract int getMultiplier();
 
-    public Beast(String name, String color, double powerLevel, Size size) {
+    public Beast(String name, String color, double powerLevel, Size size, String cry) {
         this.name = name;
         this.color = color;
         this.powerLevel = powerLevel*getMultiplier();
         this.size = size;
+        this.cry = cry;
     }
 
     public String getName() {

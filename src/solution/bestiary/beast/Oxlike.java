@@ -1,11 +1,9 @@
 package solution.bestiary.beast;
 
+import solution.bestiary.utils.Size;
+
 public final class Oxlike extends Beast{
 
-    @Override
-    public void speak() {
-        System.out.println("Moo");
-    }
 
     @Override
     public String type() {
@@ -17,9 +15,7 @@ public final class Oxlike extends Beast{
         return 5;
     }
 
-
-
-    public Oxlike(String name, String color, double powerLevel) {
-        super(name, color, powerLevel);
+    public Oxlike(String name, String color, double powerLevel, Size size, String cry) {
+        super(name, color, powerLevel, size, cry);
     }
 }

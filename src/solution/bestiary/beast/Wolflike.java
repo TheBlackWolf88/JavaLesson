@@ -1,11 +1,9 @@
 package solution.bestiary.beast;
 
+import solution.bestiary.utils.Size;
+
 public final class Wolflike extends Beast{
 
-    @Override
-    public void speak() {
-        System.out.println("Vau");
-    }
 
     @Override
     public String type() {
@@ -17,9 +15,7 @@ public final class Wolflike extends Beast{
         return 3;
     }
 
-
-
-    public Wolflike(String name, String color, double powerLevel) {
-        super(name, color, powerLevel);
+    public Wolflike(String name, String color, double powerLevel, Size size, String cry) {
+        super(name, color, powerLevel, size, cry);
     }
 }

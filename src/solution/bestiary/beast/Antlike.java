@@ -1,11 +1,8 @@
 package solution.bestiary.beast;
 
-public final class Antlike extends Beast{
+import solution.bestiary.utils.Size;
 
-    @Override
-    public void speak() {
-        System.out.println("...");
-    }
+public final class Antlike extends Beast{
 
     @Override
     public String type() {
@@ -17,9 +14,7 @@ public final class Antlike extends Beast{
         return 1;
     }
 
-
-
-    public Antlike(String name, String color, double powerLevel) {
-        super(name, color, powerLevel);
+    public Antlike(String name, String color, double powerLevel, Size size, String cry) {
+        super(name, color, powerLevel, size, cry);
     }
 }

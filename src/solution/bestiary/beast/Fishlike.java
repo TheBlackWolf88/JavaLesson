@@ -1,10 +1,8 @@
 package solution.bestiary.beast;
 
+import solution.bestiary.utils.Size;
+
 public final class Fishlike extends Beast{
-    @Override
-    public void speak() {
-        System.out.println("Glug");
-    }
 
     @Override
     public String type() {
@@ -16,9 +14,7 @@ public final class Fishlike extends Beast{
         return 2;
     }
 
-
-
-    public Fishlike(String name, String color, double powerLevel) {
-        super(name, color, powerLevel);
+    public Fishlike(String name, String color, double powerLevel, Size size, String cry) {
+        super(name, color, powerLevel, size, cry);
     }
 }
